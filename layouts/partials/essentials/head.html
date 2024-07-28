@@ -1,0 +1,61 @@
+<meta charset="utf-8" />
+
+<!-- responsive meta -->
+<meta
+  name="viewport"
+  content="width=device-width, initial-scale=1, maximum-scale=5" />
+
+<!-- theme meta -->
+<meta name="theme-name" content="asdg" />
+
+<!-- favicon -->
+{{ partial "favicon" . }}
+
+
+<!-- manifest -->
+{{ partial "manifest" . }}
+
+
+<!-- site verifications -->
+{{ partial "site-verifications.html" . }}
+
+
+<!-- opengraph and twitter card -->
+{{ partial "basic-seo.html" . }}
+
+
+<!-- custom script -->
+{{ partial "custom-script.html" . }}
+
+
+<!-- google analytics -->
+{{ if and site.Config.Services.GoogleAnalytics.ID (ne site.Config.Services.GoogleAnalytics.ID "G-MEASUREMENT_ID") }}
+  {{ template "_internal/google_analytics.html" . }}
+{{ end }}
+
+
+<!-- google tag manager -->
+{{ partial "gtm.html" . }}
+
+
+<!-- search index -->
+{{ partial "search-index.html" . }}
+
+
+<!-- matomo analytics -->
+{{/* {{ partial "matomo-analytics.html" . }} */}}
+
+<!--  Baidu analytics -->
+{{/* {{ partial "baidu-analytics.html" . }} */}}
+
+<!-- Plausible Analytics -->
+{{/* {{ partial "plausible-analytics.html" . }} */}}
+
+<!-- Counter Analytics -->
+{{/* {{ partial "counter-analytics.html" . }} */}}
+
+<!-- Crisp Chat -->
+{{/* {{ partial "crisp-chat.html" . }} */}}
+
+<!-- Mermaid -->
+{{ partial "mermaid/assets/js" . }}

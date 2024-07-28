@@ -1,0 +1,3 @@
+[submodule "assets/scss/UiKit"]
+	path = assets/scss/UiKit
+	url = git@github.com:webdevelop-pro/ui-kit.git
